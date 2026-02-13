@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Kiss Day 🤍</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 45px;
+            font-weight: 300;
+            letter-spacing: 3px;
+        }
+
+        p {
+            font-size: 20px;
+            width: 70%;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 12px 30px;
+            border-radius: 30px;
+            border: none;
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            backdrop-filter: blur(5px);
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            background: white;
+            color: #ff7eb3;
+            transform: scale(1.1);
+        }
+
+        .kiss {
+            position: absolute;
+            font-size: 25px;
+            animation: float 8s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(100vh);
+            }
+            to {
+                transform: translateY(-10vh);
+            }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Happy Kiss Day My Love 🤍💋</h1>
+
+    <p>
+        In every soft moment,  
+        in every heartbeat,  
+        I find you.  
+        Today, I just want one thing —  
+        a kiss that lasts forever ✨
+    </p>
+
+    <button onclick="showMessage()">Tap for a Soft Kiss 💋</button>
+
+    <div class="footer">
+        Made with love for Shambhavi 🤍
+    </div>
+
+    <audio autoplay loop>
+        <source src="song.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        function showMessage() {
+            alert("Muahhh 💋 You are my forever aesthetic dream 🤍");
+        }
+
+        function createKiss() {
+            const kiss = document.createElement("div");
+            kiss.classList.add("kiss");
+            kiss.innerHTML = "💋";
+            kiss.style.left = Math.random() * 100 + "vw";
+            document.body.appendChild(kiss);
+
+            setTimeout(() => {
+                kiss.remove();
+            }, 8000);
+        }
+
+        setInterval(createKiss, 500);
+    </script>
+
+</body>
+</html>
